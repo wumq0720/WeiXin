@@ -60,9 +60,21 @@ public class WeixinServlet extends HttpServlet {
 				}
 			} else if (MessageUtil.MESSAGE_EVENT.equals(msgType)) {
 				String eventType = map.get("Event");
+				System.out.println(eventType);
 				if (MessageUtil.MESSAGE_SUBSCRIBE.equals(eventType)) {
 					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
+				} else if (MessageUtil.MESSAGE_CLICK.equals(eventType)) {
+					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
+				} else if (MessageUtil.MESSAGE_VIEW.equals(eventType)) {
+					String url = map.get("EventKey");
+					message = MessageUtil.initText(toUserName, fromUserName, url);
+				} else if (MessageUtil.MESSAGE_SCANCODE.equals(eventType)) {
+					String key = map.get("EventKey");
+					message = MessageUtil.initText(toUserName, fromUserName, key);
 				}
+			} else if (MessageUtil.MESSAGE_LOCATION.equals(msgType)) {
+				String label = map.get("Label");
+				message = MessageUtil.initText(toUserName, fromUserName, label);
 			}
 			System.out.println(message);
 			out.print(message);

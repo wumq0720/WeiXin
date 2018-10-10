@@ -37,8 +37,9 @@ public class MessageUtil {
 	public static final String MESSAGE_EVENT = "event";
 	public static final String MESSAGE_SUBSCRIBE = "subscribe";
 	public static final String MESSAGE_UNSUBSCRIBE = "unsubscribe";
-	public static final String MESSAGE_CLICK = "click";
-	public static final String MESSAGE_VIEW = "view";
+	public static final String MESSAGE_CLICK = "CLICK";
+	public static final String MESSAGE_VIEW = "VIEW";
+	public static final String MESSAGE_SCANCODE = "scancode_push";
 
 	/**
 	 * xml转为Map集合
@@ -170,7 +171,7 @@ public class MessageUtil {
 		news.setTitle("慕课网介绍");
 		news.setDescription(
 				"慕课网是垂直的互联网IT技能免费学习网站。以独家视频教程、在线编程工具、学习计划、问答社区为核心特色。在这里，你可以找到最好的互联网技术牛人，也可以通过免费的在线公开视频课程学习国内领先的互联网IT技术.");
-		news.setPicUrl("http://u7kner.natappfree.cc/Weixin/image/WMEBT.jpg");
+		news.setPicUrl("http://cxxapk.natappfree.cc/Weixin/image/WMEBT.jpg");
 		news.setUrl("www.imooc.com?v=1");
 
 		newsList.add(news);
@@ -220,8 +221,8 @@ public class MessageUtil {
 		music.setThumbMediaId("ymqohF3RY4Xw1zjDOPF1rLWb1jIXiLZf5auuR0PnJhXjo13TC1lIpiaROLXt-FPE");
 		music.setTitle("see you again");
 		music.setDescription("速7片尾曲");
-		music.setMusicUrl("http://u7kner.natappfree.cc/Weixin/resource/See You Again.mp3");
-		music.setHQMusicUrl("http://u7kner.natappfree.cc/Weixin/resource/See You Again.mp3");
+		music.setMusicUrl("http://cxxapk.natappfree.cc/Weixin/resource/See You Again.mp3");
+		music.setHQMusicUrl("http://cxxapk.natappfree.cc/Weixin/resource/See You Again.mp3");
 
 		MusicMessage musicMessage = new MusicMessage();
 		musicMessage.setToUserName(fromUserName);
