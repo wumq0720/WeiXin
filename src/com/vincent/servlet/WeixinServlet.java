@@ -13,6 +13,7 @@ import org.dom4j.DocumentException;
 
 import com.vincent.util.CheckUtil;
 import com.vincent.util.MessageUtil;
+import com.vincent.util.WeixinUtil;
 
 public class WeixinServlet extends HttpServlet {
 
@@ -57,6 +58,14 @@ public class WeixinServlet extends HttpServlet {
 					message = MessageUtil.initMusicMessage(toUserName, fromUserName);
 				} else if ("?".equals(content) || "？".equals(content)) {
 					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
+				}
+				else if(content.startsWith("翻译")){
+					String word = content.replaceAll("^翻译", "").trim();
+					if("".equals(word)){
+						message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.threeMenu());
+					}else{
+						message = MessageUtil.initText(toUserName, fromUserName, WeixinUtil.translate(word));
+					}
 				}
 			} else if (MessageUtil.MESSAGE_EVENT.equals(msgType)) {
 				String eventType = map.get("Event");

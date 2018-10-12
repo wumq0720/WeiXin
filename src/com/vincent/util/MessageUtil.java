@@ -117,6 +117,17 @@ public class MessageUtil {
 				"慕课网课程涵盖前端开发、PHP、Html5、Android、iOS、Swift等IT前沿技术语言，包括基础课程、实用案例、高级分享三大类型，适合不同阶段的学习人群。以纯干货、短视频的形式为平台特点，为在校学生、职场白领提供了一个迅速提升技能、共同分享进步的学习平台。");
 		return sb.toString();
 	}
+	
+	public static String threeMenu(){
+		StringBuffer sb = new StringBuffer();
+		sb.append("词组翻译使用指南\n\n");
+		sb.append("使用示例：\n");
+		sb.append("翻译足球\n");
+		sb.append("翻译中国足球\n");
+		sb.append("翻译football\n\n");
+		sb.append("回复？显示主菜单。");
+		return sb.toString();
+	}
 
 	/**
 	 * 图文消息转为xml
@@ -171,7 +182,7 @@ public class MessageUtil {
 		news.setTitle("慕课网介绍");
 		news.setDescription(
 				"慕课网是垂直的互联网IT技能免费学习网站。以独家视频教程、在线编程工具、学习计划、问答社区为核心特色。在这里，你可以找到最好的互联网技术牛人，也可以通过免费的在线公开视频课程学习国内领先的互联网IT技术.");
-		news.setPicUrl("http://cxxapk.natappfree.cc/Weixin/image/WMEBT.jpg");
+		news.setPicUrl("http://ny7ua9.natappfree.cc/Weixin/image/imooc.jpg");
 		news.setUrl("www.imooc.com?v=1");
 
 		newsList.add(news);
@@ -221,8 +232,8 @@ public class MessageUtil {
 		music.setThumbMediaId("ymqohF3RY4Xw1zjDOPF1rLWb1jIXiLZf5auuR0PnJhXjo13TC1lIpiaROLXt-FPE");
 		music.setTitle("see you again");
 		music.setDescription("速7片尾曲");
-		music.setMusicUrl("http://cxxapk.natappfree.cc/Weixin/resource/See You Again.mp3");
-		music.setHQMusicUrl("http://cxxapk.natappfree.cc/Weixin/resource/See You Again.mp3");
+		music.setMusicUrl("http://ny7ua9.natappfree.cc/Weixin/resource/See You Again.mp3");
+		music.setHQMusicUrl("http://ny7ua9.natappfree.cc/Weixin/resource/See You Again.mp3");
 
 		MusicMessage musicMessage = new MusicMessage();
 		musicMessage.setToUserName(fromUserName);
